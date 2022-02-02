@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import { useEffect } from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+
 import { ServerData } from '../../types/common'
 import { fetchData } from '../../utils/fetching'
 

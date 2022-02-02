@@ -6,7 +6,7 @@ import { ServerData } from '../types/common'
 const Projects: FC<{data: ServerData[]}> = ({data}) =>{
   return (
       <>
-        <section className="services" id="services">
+        <section className="products" id="products">
 
         <h1 className="heading">Каталог продуктов</h1>
 

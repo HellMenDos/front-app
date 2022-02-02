@@ -2,6 +2,7 @@ import type { NextPage } from 'next'
 import { useEffect } from 'react'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
+
 import { Page } from '../../types/common'
 import { fetchData } from '../../utils/fetching'
 
@@ -12,7 +13,7 @@ const Page: NextPage<{ page: Page }> = ({page}) => {
 
   useEffect(()=> {
     // @ts-ignore
-    document.querySelector('.box-container').innerHTML = product.describe
+    document.querySelector('.box-container').innerHTML = page.describe
   },[])
 
   return (

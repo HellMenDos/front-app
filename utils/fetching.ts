@@ -5,6 +5,13 @@ export async function fetchData<T>(section:Section,method:string): Promise<T>{
     return await data.json()
 }
 
-export async function contactWithUs(section:Section,data: Proposal) {
-    // await axios.post(`${Url}/${section}/proposal/`,{ ...data })
+export async function contactWithUs(section:string,data: Proposal) {
+    await fetch(`${Url}/${section}/proposal/`,{ 
+        method:'POST',
+        body:JSON.stringify(data),
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+    })
 }

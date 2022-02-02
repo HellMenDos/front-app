@@ -11,7 +11,7 @@ const About: FC = () => {
         <div className="row">
 
         <div className="video">
-            <video src="images/about-vid.mp4" loop muted></video>
+            <video src="/about-vid.mp4" loop muted autoPlay></video>
         </div>
 
         <div className="content">

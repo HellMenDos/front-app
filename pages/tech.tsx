@@ -28,16 +28,16 @@ const HomePage: NextPage<{
         <Projects data={products} />
         <Services data={service} />
         <Works data={work} />
-        <Contact path={'main'} />
+        <Contact path={'tech'} />
       </>
   )
 }
 
 export const  getServerSideProps: GetServerSideProps = async () => {
-  const slider = await fetchData<Carousel[]>('main','carousel/all/')
-  const products = await fetchData<ServerData[]>('main','products/all/')
-  const work = await fetchData<ServerData[]>('main','work/all/')
-  const service = await fetchData<ServerData[]>('main','service/all/')
+  const slider = await fetchData<Carousel[]>('tech','carousel/all/')
+  const products = await fetchData<ServerData[]>('tech','products/all/')
+  const work = await fetchData<ServerData[]>('tech','work/all/')
+  const service = await fetchData<ServerData[]>('tech','service/all/')
 
 
   return {

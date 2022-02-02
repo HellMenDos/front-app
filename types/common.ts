@@ -2,7 +2,7 @@ export const Url = 'http://localhost'
 
 export type Section = 'main' | 'tech'
 
-type File = {
+export type File = {
     id:number,
     title:string,
     photo:string
@@ -13,15 +13,16 @@ export interface Proposal {
     email:string,
     phone:string,
     message:string,
-    date:Date
+    date:string
 }
 
 export interface Carousel {
     id:number,
     title:string,
     describe:string,
-    button_text:string,
-    photo:string
+    button_text?:string,
+    button_url?:string,
+    photo?:string
 }
 
 export interface Page {

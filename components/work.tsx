@@ -1,14 +1,16 @@
 
 import React,{FC} from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
+
 import WorkCard from './sub-components/work-card';
 import { ServerData } from '../types/common'
+import 'swiper/css';
+
 
 const Works: FC<{data: ServerData[]}> = ({data}) =>{
   return (
       <>
-        <section className="blogs" id="blogs">
+        <section className="works" id="works">
 
         <h1 className="heading">Наши работы</h1>
 

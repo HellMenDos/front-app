@@ -1,8 +1,10 @@
 import type { GetServerSideProps, NextPage } from 'next'
+import Head from 'next/head'
+
 import About from '../components/about';
 import Work from '../components/work';
 import Contact from '../components/contact';
-import Head from 'next/head'
+
 import { ServerData } from '../types/common';
 import { fetchData } from '../utils/fetching';
 
@@ -15,7 +17,7 @@ const WorksPage: NextPage<{work:ServerData[]}> = ({ work }) => {
         </Head>
         <Work data={work} />
         <About />
-        <Contact />
+        <Contact path={'main'}/>
       </>
   )
 }

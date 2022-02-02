@@ -1,12 +1,17 @@
 
-import React,{FC} from 'react'
+import React,{ FC,useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
 
 import 'swiper/css';
-import SliderCard from './sub-components/slider-card';
+import "swiper/css/navigation"
 
-const Slider: FC<{data:any}> = ({data}) => {
+import SliderCard from './sub-components/slider-card';
+import { BiArrowFromRight } from "react-icons/bi";
+import { Carousel } from '../types/common';
+
+const Slider: FC<{data:Carousel[]}> = ({data}) => {
+
   return (
       <>
         <section className="home" id="home">
@@ -16,7 +21,9 @@ const Slider: FC<{data:any}> = ({data}) => {
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             spaceBetween={50}
             slidesPerView={1}
-            navigation
+            navigation={true}
+            loop={true}
+            effect="fade"
             pagination={{ clickable: true }}
             scrollbar={{ draggable: true }}
             onSwiper={(swiper) => console.log(swiper)}
@@ -32,11 +39,6 @@ const Slider: FC<{data:any}> = ({data}) => {
                     })
                 }
             </Swiper>
-
-
-        <div className="js-swiper-pagination-progress-button-next">→</div>
-        <div className="js-swiper-pagination-progress-button-prev">←</div>
-
         </div>
 
         </section>

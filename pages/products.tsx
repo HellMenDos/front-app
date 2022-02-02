@@ -1,8 +1,10 @@
 import type { GetServerSideProps, NextPage } from 'next'
+import Head from 'next/head'
+
 import About from '../components/about';
 import Projects from '../components/projects';
 import Contact from '../components/contact';
-import Head from 'next/head'
+
 import { fetchData } from '../utils/fetching';
 import { ServerData } from '../types/common'
 
@@ -15,7 +17,7 @@ const ProductsPage: NextPage<{products:ServerData[]}> = ({ products }) => {
         </Head>
         <Projects data={products} />
         <About />
-        <Contact />
+        <Contact path={'main'} />
       </>
   )
 }
