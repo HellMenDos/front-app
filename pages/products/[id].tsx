@@ -5,6 +5,7 @@ import { useRouter } from 'next/router'
 
 import { ServerData } from '../../types/common'
 import { fetchData } from '../../utils/fetching'
+import { File } from '../../types/common';
 
 
 const Product: NextPage<{ product: ServerData }> = ({product}) => {
@@ -19,12 +20,19 @@ const Product: NextPage<{ product: ServerData }> = ({product}) => {
   return (
       <>
         <Head>
-          <title>Продукт № {id} </title>
+          <title>{product.title}</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <meta name="description" content={product.sub_title} />
         </Head>
         <section>
           <h1  className="heading">{product.title}</h1>
           <div className="box-container box-container-page">
+          </div>
+          <div className='file-section'>
+            <h4  className="heading">Прикрепленные файлы</h4>
+            <div>
+              {(product.files as File[]).map((item:File) => <a className='btn btn-download' href={item.photo}>{item.title}</a>)}
+            </div>
           </div>
         </section>
       </>

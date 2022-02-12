@@ -89,7 +89,7 @@ function Layout({ Component, pageProps }: AppProps) {
         <Link href={HrefConstructor('works')}>
           <a>Работы</a>
         </Link>
-        {moveBetweenSection()}
+        {/* {moveBetweenSection()} */}
         <PagesLink pages={pages} />   
       </nav>
 
@@ -118,7 +118,7 @@ function Layout({ Component, pageProps }: AppProps) {
         <Link href={HrefConstructor('works')}>
           <a className='btn'>Работы</a>
         </Link>
-        {moveBetweenSection('bottom')}
+        {/* {moveBetweenSection('bottom')} */}
         <PagesLink pages={pages} position={'bottom'} />
 
     </div>

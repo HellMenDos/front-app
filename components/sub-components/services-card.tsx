@@ -6,7 +6,7 @@ const ServicesCard: FC<{item: ServerData}> = ({ item }) =>{
   return (
     <a href={item.button_url ? item.button_url : "#contact"} className="box">
         <div className="image">
-            <img src={item.files[0].photo} alt="" />
+            <img src={item.files as string} alt="" />
         </div>
         <div className="content">
             <div className="info">

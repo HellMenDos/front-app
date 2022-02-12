@@ -14,6 +14,7 @@ const WorksPage: NextPage<{work:ServerData[]}> = ({ work }) => {
         <Head>
           <title>Наши работы</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <meta name="description" content="Работы которые мы предоставляем" />
         </Head>
         <Work data={work} />
         <About />

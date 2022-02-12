@@ -22,7 +22,7 @@ const WorkCard: FC<{item: ServerData}> = ({ item }) =>{
               scrollbar={{ draggable: true }}
             >
                 {
-                item.files.map((file: File) => {
+                (item.files as File[]).map((file: File) => {
                     return (
                       <SwiperSlide key={file.id}>
                         <img src={file.photo} alt="" />

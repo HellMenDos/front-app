@@ -14,6 +14,7 @@ const ServicesPage: NextPage<{service:ServerData[]}> = ({ service }) => {
         <Head>
           <title>Наши услуги</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <meta name="description" content="Услуги которые мы предоставляем" />
         </Head>
         <Services data={service}/>
         <About />

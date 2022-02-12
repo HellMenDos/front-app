@@ -39,5 +39,5 @@ export interface ServerData {
     sub_title?:string,
     describe:string,
     button_url?:string,
-    files:File[]
+    files:File[] | string
 }

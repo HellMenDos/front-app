@@ -856,7 +856,7 @@ section {
   width: 90%;
   overflow: hidden;
   margin: 0 auto;
-  margin-bottom: -3rem;
+  margin-bottom: 1rem;
 }
 
 .works .slide .image img {
@@ -1090,5 +1090,16 @@ table {
 }
 .contact-modal > .row > div > form > .contact__section > .contact__row > div {
   letter-spacing: 1px;
+}
+.btn-download {
+  transform: none;
+  border-radius: 30px;
+  background: #f5bf22;
+}
+.file-section {
+  margin-top: 70px;
+}
+.file-section  > .heading {
+  font-size: 2rem;
 }
 /*# sourceMappingURL=style.css.map */

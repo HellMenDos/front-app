@@ -6,7 +6,7 @@ const About: FC = () => {
       <>
         <section className="about" id="about">
 
-        <h1 className="heading"> about us </h1>
+        <h1 className="heading">О нас</h1>
 
         <div className="row">
 

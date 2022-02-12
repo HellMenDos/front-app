@@ -14,6 +14,7 @@ const ProductsPage: NextPage<{products:ServerData[]}> = ({ products }) => {
         <Head>
           <title>Каталок продуктов</title>
           <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+          <meta name="description" content="Наши продукты, тут вы можете увидеть и преобрести продукты сделанные нами" />
         </Head>
         <Projects data={products} />
         <About />
